@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homework 24 Task 2 Text Editor v2.0</title>
+
+    <!-- Bootstrap CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header bg-secondary">
+            <div class="header-style-settings">
+                <button type="button" class="btn btn-light" disabled>
+                    <i class="fas fa-code"></i>
+                </button>
+
+                <div class="btn-group textStyle">
+                    <label for="style-settings__font-weight-btn" class="btn btn-light style-settings__btn">
+                        <input type="checkbox" id="style-settings__font-weight-btn" class="style-settings__checkbox"
+                            data-property-value="bold">
+                        <i class="fas fa-bold"></i>
+                    </label>
+
+                    <label for="style-settings__font-style-btn" class="btn btn-light style-settings__btn">
+                        <input type="checkbox" id="style-settings__font-style-btn" class="style-settings__checkbox"
+                            data-property-value="italic">
+                        <i class="fas fa-italic"></i>
+                    </label>
+
+                    <label for="style-settings__underline-btn" class="btn btn-light style-settings__btn">
+                        <input type="checkbox" id="style-settings__underline-btn" class="style-settings__checkbox"
+                            data-property-value="underline">
+                        <i class="fas fa-underline"></i>
+                    </label>
+
+                    <label for="style-settings__strikethrough-btn" class="btn btn-light style-settings__btn">
+                        <input type="checkbox" id="style-settings__strikethrough-btn" class="style-settings__checkbox"
+                            data-property-value="line-through">
+                        <i class="fas fa-strikethrough"></i>
+                    </label>
+                </div>
+
+                <div class="btn-group">
+                    <label for="style-settings__align-left-btn"
+                        class="btn btn-light style-settings__btn style-settings__btn-active">
+                        <input type="radio" name="text-align" id="style-settings__align-left-btn"
+                            class="style-settings__radio" data-property-value="left" selected>
+                        <i class="fas fa-align-left"></i>
+                    </label>
+
+                    <label for="style-settings__align-center-btn" class="btn btn-light style-settings__btn">
+                        <input type="radio" name="text-align" id="style-settings__align-center-btn"
+                            class="style-settings__radio" data-property-value="center">
+                        <i class="fas fa-align-center"></i>
+                    </label>
+
+                    <label for="style-settings__align-right-btn" class="btn btn-light style-settings__btn">
+                        <input type="radio" name="text-align" id="style-settings__align-right-btn"
+                            class="style-settings__radio" data-property-value="right">
+                        <i class="fas fa-align-right"></i>
+                    </label>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-light font-family-select-btn">
+                        <i class="fas fa-font"></i> <i class="fas fa-caret-down"></i>
+                    </button>
+
+                    <div class="btn-group__select font-family-select none">
+                        <p style="font-family: Arial;">Arial</p>
+                        <p style="font-family: Georgia;">Geogia</p>
+                        <p style="font-family: Impact;">Impact</p>
+                        <p style="font-family: Tahoma;">Tahoma</p>
+                        <p style="font-family: Times New Roman;">Times New Roman</p>
+                        <p style="font-family: Verdana;">Verdana</p>
+                    </div>
+
+                    <button type="button" class="btn btn-light font-size-select-btn">
+                        <i class="fas fa-text-height"></i> <i class="fas fa-caret-down"></i>
+                    </button>
+
+                    <div class="btn-group__select font-size-select">
+                        <p style="font-size: 12px">12px</p>
+                        <p style="font-size: 14px">14px</p>
+                        <p style="font-size: 16px">16px</p>
+                        <p style="font-size: 18px">18px</p>
+                        <p style="font-size: 20px">20px</p>
+                        <p style="font-size: 22px">22px</p>
+                        <p style="font-size: 25px">25px</p>
+                        <p style="font-size: 30px">30px</p>
+                    </div>
+
+                    <button type="button" class="btn btn-light">
+                        <i class="fas fa-palette"></i>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                        <i class="fas fa-image"></i>
+                    </button>
+                </div>
+
+                <button type="button" class="btn btn-light">
+                    <i class="fas fa-unlock"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery File -->
+    <script src="./jquery-3.5.1.min.js"></script>
+
+    <!-- Main JS file -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

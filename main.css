@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+}
+
+.header-style-settings>.btn:last-child,
+.btn-group {
+    margin-left: 10px;
+}
+
+/* Style Settings hidden checkbox */
+.style-settings__checkbox,
+.style-settings__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Style Settings buttons */
+.style-settings__btn:hover {
+    color: black;
+
+    background-color: #a7a7a7;
+    border-color: #a7a7a7;
+}
+
+.style-settings__btn-active {
+    background-color: #8d8d8d;
+    border-color: #8d8d8d;
+}
+
+/* Select */
+.btn-group__select {
+    margin-top: 4px;
+
+    width: 170px;
+
+    background-color: #fff;
+    border: 1px solid #8d8d8d;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+
+    position: absolute;
+    top: 100%;
+}
+
+.font-family-select {
+    right: 135px;
+}
+
+.font-size-select {
+    right: 78px;
+}
+
+.btn-group__select>p {
+    cursor: pointer;
+
+    margin: 0;
+    padding: 5px 15px;
+}
+
+/* Section Text */
+.text {
+    padding: 35px;
+}
+
+/* None */
+.none {
+    display: none;
+}
