@@ -1,4 +1,13 @@
 $(document).ready(() => {
+    // Bootstrap
+    // Modal
+    $('.modal').on(
+        'shown.bs.modal',
+        function () {
+            $('.modal-btn').focus();
+        }
+    );
+
     const CONTENT_BLOCK = $('.text');
 
     const BTN_CLASS_ACTIVE = 'style-settings__btn-active';
@@ -20,12 +29,14 @@ $(document).ready(() => {
             case 'left':
             case 'center':
             case 'right':
-                return 'textAlign'
-        }
-    }
+                return 'textAlign';
+        };
+    };
 
+    // Убирает либо добавляет элементу класс в зависимости от его состояния
     const switchClassFromState = (state, selector, className) => selector[(state ? 'add' : 'remove') + 'Class'](className);
 
+    // Убирает либо добавляет свойству значение в зависимости от его состояния
     const forNotSinglePropertyValue =
         (state, currentValue, value) => {
             if (state)
@@ -58,7 +69,7 @@ $(document).ready(() => {
                 });
             }
         );
-    }
+    };
 
     setTextStyleEvent(FONT_WEIGHT_BTN);
     setTextStyleEvent(FONT_STYLE_BTN);
@@ -87,37 +98,71 @@ $(document).ready(() => {
                 });
             }
         );
-    }
+    };
 
     setTextAlignEvent(ALIGN_LEFT);
     setTextAlignEvent(ALIGN_CENTER);
     setTextAlignEvent(ALIGN_RIGHT);
 
-    $('.font-family-select-btn').on(
+    // const dropDown = (selector, dropBlock, cssProperty) => {
+    //     $(selector).on(
+    //         'click',
+    //         e => {
+    //             $(dropBlock).toggleClass('none');
+
+    //             e.stopPropagation();
+
+    //             $(window).on(
+    //                 'click',
+    //                 e => {
+    //                     if (!$(e.target).parent().hasClass(dropBlock))
+    //                         $(dropBlock).addClass('none');
+    //                 }
+    //             );
+    //         }
+    //     );
+
+    //     $(dropBlock).on(
+    //         'click',
+    //         e => {
+    //             CONTENT_BLOCK.css({
+    //                 [cssProperty]: $(e.target).css(cssProperty),
+    //             });
+
+    //             $(dropBlock).addClass('none');
+    //         }
+    //     );
+    // }
+
+    // dropDown('.font-family-select-btn', '.font-family-select', 'fontFamily');
+    // dropDown('.font-size-select-btn', '.font-size-select', 'fontSize');
+
+    const DROPDOWN_MENU = $('.dropdown-menu');
+
+    const setFontStyle = sel => {
+        $(sel).on(
+            'click',
+            function (e) {
+                // Получаю свойство CSS из атрибута data родительского элемента
+                const CSS_PROPERTY = $(this).data('fontStyle');
+
+                // Получаю стили выбраного элемента и задаю их блоку с текстом
+                CONTENT_BLOCK.css({
+                    [CSS_PROPERTY]: $(e.target).css(CSS_PROPERTY),
+                });
+            }
+        );
+    };
+
+    for (const menu of DROPDOWN_MENU)
+        setFontStyle(menu);
+
+    $('.modal-colors').on(
         'click',
-        e => {
-            $('.font-family-select').toggleClass('none');
-
-            e.stopPropagation();
-
-            $(window).on(
-                'click',
-                e => {
-                    if (!$(e.target).parent().hasClass('font-family-select'))
-                        $('.font-family-select').addClass('none');
-                }
-            );
-        }
-    );
-
-    $('.font-family-select').on(
-        'click',
-        e => {
-            CONTENT_BLOCK.css({
-                fontFamily: $(e.target).css('fontFamily'),
-            });
-
-            $('.font-family-select').addClass('none');
+        function (e) {
+            $('body').css({
+                [$(this).data('property')]: $(e.target).css('backgroundColor'),
+            })
         }
     );
 });

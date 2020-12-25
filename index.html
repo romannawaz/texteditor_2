@@ -74,38 +74,75 @@
                 </div>
 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-light font-family-select-btn">
-                        <i class="fas fa-font"></i> <i class="fas fa-caret-down"></i>
-                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-font"></i>
+                        </button>
 
-                    <div class="btn-group__select font-family-select none">
-                        <p style="font-family: Arial;">Arial</p>
-                        <p style="font-family: Georgia;">Geogia</p>
-                        <p style="font-family: Impact;">Impact</p>
-                        <p style="font-family: Tahoma;">Tahoma</p>
-                        <p style="font-family: Times New Roman;">Times New Roman</p>
-                        <p style="font-family: Verdana;">Verdana</p>
+                        <ul class="dropdown-menu dropdown-menu-end" data-font-style="fontFamily">
+                            <li style="font-family: Arial;">
+                                <button class="dropdown-item" type="button">Arial</button>
+                            </li>
+                            <li style="font-family: Georgia;">
+                                <button class="dropdown-item" type="button">Geogia</button>
+                            </li>
+                            <li style="font-family: Impact;">
+                                <button class="dropdown-item" type="button">Impact</button>
+                            </li>
+                            <li style="font-family: Tahoma;">
+                                <button class="dropdown-item" type="button">Tahoma</button>
+                            </li>
+                            <li style="font-family: Times New Roman;">
+                                <button class="dropdown-item" type="button">Times New Roman</button>
+                            </li>
+                            <li style="font-family: Verdana;">
+                                <button class="dropdown-item" type="button">Verdana</button>
+                            </li>
+                        </ul>
                     </div>
 
-                    <button type="button" class="btn btn-light font-size-select-btn">
-                        <i class="fas fa-text-height"></i> <i class="fas fa-caret-down"></i>
-                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-text-height"></i>
+                        </button>
 
-                    <div class="btn-group__select font-size-select">
-                        <p style="font-size: 12px">12px</p>
-                        <p style="font-size: 14px">14px</p>
-                        <p style="font-size: 16px">16px</p>
-                        <p style="font-size: 18px">18px</p>
-                        <p style="font-size: 20px">20px</p>
-                        <p style="font-size: 22px">22px</p>
-                        <p style="font-size: 25px">25px</p>
-                        <p style="font-size: 30px">30px</p>
+                        <ul class="dropdown-menu dropdown-menu-end" data-font-style="fontSize">
+                            <li style="font-size: 12px">
+                                <button class="dropdown-item" type="button">12px</button>
+                            </li>
+                            <li style="font-size: 14px">
+                                <button class="dropdown-item" type="button">14px</button>
+                            </li>
+                            <li style="font-size: 16px">
+                                <button class="dropdown-item" type="button">16px</button>
+                            </li>
+                            <li style="font-size: 18px">
+                                <button class="dropdown-item" type="button">18px</button>
+                            </li>
+                            <li style="font-size: 20px">
+                                <button class="dropdown-item" type="button">20px</button>
+                            </li>
+                            <li style="font-size: 22px">
+                                <button class="dropdown-item" type="button">22px</button>
+                            </li>
+                            <li style="font-size: 25px">
+                                <button class="dropdown-item" type="button">25px</button>
+                            </li>
+                            <li style="font-size: 30px">
+                                <button class="dropdown-item" type="button">30px</button>
+                            </li>
+                        </ul>
                     </div>
 
-                    <button type="button" class="btn btn-light">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                        data-bs-target="#modal-text-color">
                         <i class="fas fa-palette"></i>
                     </button>
-                    <button type="button" class="btn btn-light">
+
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                        data-bs-target="#modal-background-color">
                         <i class="fas fa-image"></i>
                     </button>
                 </div>
@@ -117,6 +154,133 @@
         </header>
 
         <main class="main">
+            <div class="modal fade" id="modal-text-color" tabindex="-1" aria-labelledby="modal-text-color"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Choose text color</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-colors" data-property="color">
+                                <div class="color" style="background-color: #0ba89a;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #098f84;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #20b56e;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #1b9b5f;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #2990de;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #2179ba;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #9c64b6;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #9151ae;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #32485f;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #293d50;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f6bc07;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f99a0b;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #ee821c;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #de5b00;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f35a3a;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #c94426;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #ebeef1;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #bcc1c5;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #91a2a4;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #7d898c;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #010001;" data-bs-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal-background-color" tabindex="-1" aria-labelledby="modal-background-color"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Choose text color</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+
+                            <div class="modal-colors" data-property="backgroundColor">
+                                <div class="color" style="background-color: #0ba89a;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #098f84;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #20b56e;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #1b9b5f;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #2990de;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #2179ba;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #9c64b6;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #9151ae;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #32485f;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #293d50;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f6bc07;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f99a0b;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #ee821c;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #de5b00;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #f35a3a;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #c94426;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #ebeef1;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #bcc1c5;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #91a2a4;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #7d898c;" data-bs-dismiss="modal">
+                                </div>
+                                <div class="color" style="background-color: #010001;" data-bs-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <section class="section text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quaerat?</p>
