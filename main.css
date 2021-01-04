@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-position: top;
+    background-size: cover;
+}
+
 .container-fluid {
     padding: 0;
 }
@@ -16,6 +21,12 @@
 
     height: 70px;
 }
+
+.nav {
+    margin-bottom: 15px;
+}
+
+/* Header */
 
 .header-style-settings>.btn:last-child,
 .btn-group {
@@ -44,14 +55,10 @@
 }
 
 /* Select */
-/* .btn-group__select */
+
 .dropdown-menu {
     padding: 0;
 }
-
-/* .dropdown-menu li {
-    border: 1px solid #000;
-} */
 
 .btn-group__select>p {
     cursor: pointer;
@@ -61,19 +68,13 @@
 }
 
 /* Section Text */
+
 .text {
     padding: 35px;
 }
 
-/* None */
-.none {
-    display: none;
-}
-
-/* test */
-
-
-.modal-colors {
+/* Dropdown color palette */
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -82,7 +83,7 @@
     min-height: 200px;
 }
 
-.color {
+.gallery-color-item {
     cursor: pointer;
 
     width: 63px;
@@ -91,6 +92,55 @@
     border-radius: 5px;
 }
 
-.nav {
+.gallery-image-item {
+    cursor: pointer;
+
+    width: 150px;
+    height: 63px;
+
+    background-size: cover;
+
+    border-radius: 5px;
+}
+
+/* Form Sing In */
+
+.form-sing-in>.form-group {
     margin-bottom: 15px;
+}
+
+.form-sing-in>button {
+    width: 100%;
+}
+
+/* Textarea */
+
+.new-text {
+    width: 100%;
+    min-height: 900px;
+
+    border: none;
+
+    resize: none;
+}
+
+.new-text:focus {
+    outline: none;
+}
+
+/* Form error */
+
+.form-sing-in-error {
+    margin-bottom: 10px;
+    color: #dc3545;
+}
+
+/* Addition */
+
+table td {
+    text-align: center;
+}
+
+.none {
+    display: none;
 }
